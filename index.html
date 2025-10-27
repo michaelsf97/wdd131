@@ -7,5 +7,258 @@
 </head>
 <body>
     <h1>Welcome to WDD 131 - Michael Smith Saavedra Forero</h1>
+    
+    <!-- Interactive Elements -->
+    <button id="colorBtn">Change Background Color</button>
+    <p id="demo">Click the button to see JavaScript in action!</p>
+    <p>Current time: <span id="time"></span></p>
+    
+    <!-- Function Learning Section -->
+    <hr>
+    <h2>📚 Learning: updateTime() Function</h2>
+    <button id="functionBtn">Analyze updateTime() Function</button>
+    <div id="functionTutorial"></div>
+    <button id="testBtn">Test Different Time Formats</button>
+    <div id="timeTests"></div>
+
+    <!-- JavaScript Code -->
+    <script>
+        // This JavaScript runs in the browser - no installation needed!
+        console.log("JavaScript is working!");
+        
+        // Display current time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('time').textContent = now.toLocaleTimeString();
+        }
+        
+        // Update time every second
+        setInterval(updateTime, 1000);
+        updateTime(); // Initial call
+        
+        // Interactive button
+        document.getElementById('colorBtn').addEventListener('click', function() {
+            const colors = ['lightblue', 'lightgreen', 'lightcoral', 'lightyellow', 'lightpink'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+            document.getElementById('demo').textContent = `Background changed to ${randomColor}!`;
+        });
+        
+        // Interactive Tutorial for const now = new Date();
+        document.getElementById('learnBtn').addEventListener('click', function() {
+            const tutorial = `
+                <div style="background: #f5f5f5; padding: 20px; margin: 10px 0; border-left: 4px solid #007acc;">
+                    <h3>🎓 Tutorial: const now = new Date();</h3>
+                    
+                    <h4>Step 1: Understanding 'const'</h4>
+                    <p><code>const</code> creates a constant variable that cannot be reassigned.</p>
+                    <pre>const myName = "Michael";  // ✅ Valid
+// myName = "John";         // ❌ Error! Cannot reassign const</pre>
+                    
+                    <h4>Step 2: Understanding 'new Date()'</h4>
+                    <p><code>new Date()</code> creates a Date object representing the current moment.</p>
+                    <pre>// Right now it's: ${new Date()}</pre>
+                    
+                    <h4>Step 3: Different Ways to Create Dates</h4>
+                    <pre>const now = new Date();                    // Current time
+const christmas = new Date('2024-12-25');     // From string
+const birthday = new Date(1990, 2, 15);       // Year, month-1, day
+const timestamp = new Date(1698336000000);    // From milliseconds</pre>
+                    
+                    <h4>Step 4: What Can You Do With It?</h4>
+                    <pre>const now = new Date();
+console.log(now.getYear());      // ${new Date().getFullYear()}
+console.log(now.getMonth());     // ${new Date().getMonth()} (0-based!)
+console.log(now.getDate());      // ${new Date().getDate()}
+console.log(now.getHours());     // ${new Date().getHours()}
+console.log(now.getMinutes());   // ${new Date().getMinutes()}</pre>
+                    
+                    <h4>Step 5: Formatting the Date</h4>
+                    <pre>const now = new Date();
+now.toString()           // "${new Date().toString()}"
+now.toDateString()       // "${new Date().toDateString()}"
+now.toTimeString()       // "${new Date().toTimeString()}"
+now.toLocaleString()     // "${new Date().toLocaleString()}"</pre>
+                    
+                    <h4>Step 6: Common Mistakes</h4>
+                    <ul>
+                        <li><strong>Months are 0-indexed:</strong> January = 0, December = 11</li>
+                        <li><strong>getYear() vs getFullYear():</strong> Always use getFullYear()</li>
+                        <li><strong>Date is mutable:</strong> Even with const, you can modify the date</li>
+                    </ul>
+                    
+                    <h4>Step 7: Try It Yourself!</h4>
+                    <p>Open Developer Tools (F12) → Console and try:</p>
+                    <pre>const myDate = new Date();
+console.log(myDate);
+console.log(myDate.getFullYear());
+console.log(myDate.toLocaleString());</pre>
+                </div>
+            `;
+            
+            document.getElementById('tutorial').innerHTML = tutorial;
+            
+            // Add some interactive examples to console
+            console.group('🎓 Date Tutorial Examples');
+            console.log('1. Current date:', new Date());
+            console.log('2. Just the year:', new Date().getFullYear());
+            console.log('3. Month (0-indexed):', new Date().getMonth());
+            console.log('4. Day of month:', new Date().getDate());
+            console.log('5. Hours (24-hour):', new Date().getHours());
+            console.log('6. Formatted:', new Date().toLocaleString());
+            console.groupEnd();
+        });
+        
+        // Function Tutorial Button
+        document.getElementById('functionBtn').addEventListener('click', function() {
+            const tutorial = `
+                <div style="background: #e8f4fd; padding: 20px; margin: 10px 0; border-left: 4px solid #0066cc; font-family: Arial, sans-serif;">
+                    <h3>🔍 Analyzing: updateTime() Function</h3>
+                    
+                    <h4>📋 The Complete Function:</h4>
+                    <pre style="background: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>function updateTime() {
+    const now = new Date();
+    document.getElementById('time').textContent = now.toLocaleTimeString();
+}</code></pre>
+                    
+                    <h4>🔧 Breaking It Down Line by Line:</h4>
+                    
+                    <div style="margin: 15px 0; padding: 10px; background: #fff; border-radius: 5px;">
+                        <h5>Line 1: <code>function updateTime() {</code></h5>
+                        <ul>
+                            <li><strong>function</strong> - Declares a function (reusable block of code)</li>
+                            <li><strong>updateTime</strong> - The function name (you choose this)</li>
+                            <li><strong>()</strong> - Parameters go here (this function takes none)</li>
+                            <li><strong>{</strong> - Opens the function body</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 10px; background: #fff; border-radius: 5px;">
+                        <h5>Line 2: <code>const now = new Date();</code></h5>
+                        <ul>
+                            <li><strong>const now</strong> - Creates a constant variable named 'now'</li>
+                            <li><strong>new Date()</strong> - Gets the current date and time</li>
+                            <li><strong>;</strong> - Ends the statement</li>
+                        </ul>
+                        <p><em>Result: now = ${new Date()}</em></p>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 10px; background: #fff; border-radius: 5px;">
+                        <h5>Line 3: <code>document.getElementById('time').textContent = now.toLocaleTimeString();</code></h5>
+                        <ul>
+                            <li><strong>document</strong> - The HTML document object</li>
+                            <li><strong>getElementById('time')</strong> - Finds the HTML element with id="time"</li>
+                            <li><strong>.textContent</strong> - The text inside that element</li>
+                            <li><strong>=</strong> - Assigns a new value</li>
+                            <li><strong>now.toLocaleTimeString()</strong> - Formats the date as local time</li>
+                        </ul>
+                        <p><em>Result: "${new Date().toLocaleTimeString()}"</em></p>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 10px; background: #fff; border-radius: 5px;">
+                        <h5>Line 4: <code>}</code></h5>
+                        <ul>
+                            <li><strong>}</strong> - Closes the function body</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>🎯 What This Function Does:</h4>
+                    <ol>
+                        <li><strong>Gets current time</strong> - Creates a Date object with "right now"</li>
+                        <li><strong>Formats it nicely</strong> - Converts to readable time format</li>
+                        <li><strong>Updates the webpage</strong> - Puts the time in the HTML element</li>
+                    </ol>
+                    
+                    <h4>🔄 How It's Used:</h4>
+                    <pre style="background: #f8f8f8; padding: 10px; border-radius: 5px;"><code>updateTime();                    // Call once
+setInterval(updateTime, 1000);   // Call every 1000ms (1 second)</code></pre>
+                    
+                    <h4>💡 Key Concepts:</h4>
+                    <ul>
+                        <li><strong>Function Declaration:</strong> Defines reusable code</li>
+                        <li><strong>DOM Manipulation:</strong> Changes HTML content with JavaScript</li>
+                        <li><strong>Date Formatting:</strong> Makes dates human-readable</li>
+                        <li><strong>Element Selection:</strong> Finding specific HTML elements by ID</li>
+                    </ul>
+                </div>
+            `;
+            
+            document.getElementById('functionTutorial').innerHTML = tutorial;
+            
+            // Console examples
+            console.group('🔍 updateTime() Function Analysis');
+            console.log('1. Current Date object:', new Date());
+            console.log('2. Formatted time:', new Date().toLocaleTimeString());
+            console.log('3. Finding element:', document.getElementById('time'));
+            console.log('4. Current textContent:', document.getElementById('time').textContent);
+            console.groupEnd();
+        });
+        
+        // Test Different Time Formats Button
+        document.getElementById('testBtn').addEventListener('click', function() {
+            const now = new Date();
+            const tests = `
+                <div style="background: #f0f8ff; padding: 20px; margin: 10px 0; border-left: 4px solid #4169e1;">
+                    <h3>🧪 Testing Different Time Formats</h3>
+                    <p><strong>Same date, different formats:</strong></p>
+                    
+                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                        <tr style="background: #e6f3ff;">
+                            <th style="padding: 8px; border: 1px solid #ccc; text-align: left;">Method</th>
+                            <th style="padding: 8px; border: 1px solid #ccc; text-align: left;">Output</th>
+                            <th style="padding: 8px; border: 1px solid #ccc; text-align: left;">Use Case</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ccc;"><code>toLocaleTimeString()</code></td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">${now.toLocaleTimeString()}</td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">Time only, local format</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 8px; border: 1px solid #ccc;"><code>toLocaleDateString()</code></td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">${now.toLocaleDateString()}</td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">Date only, local format</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ccc;"><code>toLocaleString()</code></td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">${now.toLocaleString()}</td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">Both date and time</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 8px; border: 1px solid #ccc;"><code>toString()</code></td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">${now.toString()}</td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">Full technical format</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ccc;"><code>toTimeString()</code></td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">${now.toTimeString()}</td>
+                            <td style="padding: 8px; border: 1px solid #ccc;">Time with timezone</td>
+                        </tr>
+                    </table>
+                    
+                    <h4>🎨 Custom Format Examples:</h4>
+                    <pre style="background: #f8f8f8; padding: 15px; border-radius: 5px;"><code>// Custom formats using toLocaleTimeString() options
+now.toLocaleTimeString('en-US', { 
+    hour12: false          // ${now.toLocaleTimeString('en-US', { hour12: false })}
+});
+
+now.toLocaleTimeString('en-US', { 
+    hour: '2-digit',       // ${now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
+    minute: '2-digit' 
+});
+
+now.toLocaleTimeString('en-US', {
+    hour: 'numeric',       // ${now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', second: '2-digit' })}
+    minute: '2-digit',
+    second: '2-digit'
+});</code></pre>
+                </div>
+            `;
+            
+            document.getElementById('timeTests').innerHTML = tests;
+        });
+        
+        // Welcome message
+        alert('Welcome! JavaScript is now working on your page.');
+    </script>
 </body>
 </html>
