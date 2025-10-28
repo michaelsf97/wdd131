@@ -1,6 +1,38 @@
 main, footer {
-    background-color: #2471a3;
+    background-color: #f4f6f8;
     padding: 20px;
+}
+
+:root {
+    --primary-color: #2471a3;
+    --secondary-color: #ffffff;
+    --accent-color: orange;
+    --background-color: #ffffff;
+    --text-color: dark;
+}
+h1 {
+    color: #2471a3;
+    background-color: #fafbfc;
+    padding: 20px;
+    border-radius: 10px; 
+    text-align: center;
+    margin: 20px 0;
+    border: 3px solid #2471a3;
+}
+
+
+.course-title {
+    color: #f5f7f8;
+    background-color: #f4f6f8;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: inline-block;
+    border: 2px solid #f5f7f8;
+}
+
+
+#course-title {
+    color: #f7f7f7;
 }
 
 
