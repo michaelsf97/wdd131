@@ -60,17 +60,17 @@ nav a:hover{
     box-shadow: 0 4px 8px rgba(36, 113, 163, 0.3);
 }
 
-/* Two-Column Layout CSS */
+
 .column-container {
-    display: flex;                  /* Enable flexbox layout */
-    gap: 30px;                     /* Space between columns */
-    margin: 20px 0;                /* Margin above and below */
-    align-items: flex-start;       /* Align columns to top */
+    display: flex;                 
+    gap: 30px;                     
+    margin: 20px 0;                
+    align-items: flex-start;       
 }
 
 .column-left {
-    flex: 1;                       /* Take equal space (50%) */
-    min-width: 0;                  /* Allow shrinking */
+    flex: 1;                       
+    min-width: 0;                  
 }
 
 .column-right {
@@ -90,7 +90,7 @@ nav a:hover{
 }
 
 .column-container .card:hover {
-    transform: translateY(-105px);   
+    transform: translateY(-100px);   
     box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
 }
 
