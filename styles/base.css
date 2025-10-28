@@ -32,7 +32,7 @@ nav a {
     padding: 10px 15px;
     border-radius: 5px;
     background-color: #f4f5f7;
-    border:2px solid rgba (25 , 25 , 25 / 0.7); 
+    border: 2px solid rgba(25, 25, 25, 0.7); 
 }
 .course-title {
     color: #ffffff;                 
@@ -50,7 +50,7 @@ nav a {
 .course-title:hover {
     background-color: #1a5a8a;     
     transform: scale(1.02);         
-    box-shadow: 0 4px 8px rgba(240, 12, 12, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 nav a:hover{
