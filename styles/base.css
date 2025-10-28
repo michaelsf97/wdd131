@@ -20,20 +20,47 @@ h1 {
     border: 3px solid #2471a3;
 }
 
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+ 
+}
 
+nav a {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f4f5f7;
+    border:2px solid rgba (25 , 25 , 25 / 0.7); 
+}
 .course-title {
-    color: #f5f7f8;
-    background-color: #f4f6f8;
-    padding: 15px 25px;
-    border-radius: 8px;
-    display: inline-block;
-    border: 2px solid #f5f7f8;
+    color: #ffffff;                 
+    background-color: #2471a3;      
+    padding: 15px 25px;            
+    border-radius: 8px;             
+    display: inline-block;          
+    border: 2px solid #ffffff;      
+    font-weight: bold;              
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    transition: all 0.3s ease;      
 }
 
 
-#course-title {
-    color: #f7f7f7;
+.course-title:hover {
+    background-color: #1a5a8a;     
+    transform: scale(1.02);         
+    box-shadow: 0 4px 8px rgba(240, 12, 12, 0.2); 
 }
+
+nav a:hover{
+    background-color: #257ab3;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(36, 113, 163, 0.3);
+   
+}
+
 
 
 

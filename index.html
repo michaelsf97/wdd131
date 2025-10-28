@@ -39,6 +39,19 @@
             </ul>
             <p>Each project builds upon previous concepts while introducing new techniques and technologies essential for modern web development.</p>
         </section>
+
+        <div> 
+            <h3> Web Dev Resources
+                <ul>
+                    <li><a href="https://Dev.to/">Dev.to</a></li>
+                    <li><a href="https://smashing.magazine.com/">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com/">css-tricks</a></li>
+                    <li><a href="https://w3schools.com/">w3schools</a></li>
+                    <li><a href="https://udemy.com/">Udemy</a></li>
+                    <li><a href="https://imageplaceholder.com/">imageplaceholder</a></li>
+                </ul>
+            </h3>
+        </div>
     </main>
 
     <footer>
@@ -46,12 +59,6 @@
         <p id="lastModified"></p>
     </footer>
 
-    <script>
-        // Populate current year
-        document.getElementById('currentyear').textContent = new Date().getFullYear();
-        
-        // Populate last modified date
-        document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
-    </script>
+    <script src="scripts/getdates.js"></script>
 </body>
 </html>
