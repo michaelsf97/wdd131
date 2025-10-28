@@ -58,7 +58,91 @@ nav a:hover{
     color: white;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(36, 113, 163, 0.3);
-   
+}
+
+/* Two-Column Layout CSS */
+.column-container {
+    display: flex;                  /* Enable flexbox layout */
+    gap: 30px;                     /* Space between columns */
+    margin: 20px 0;                /* Margin above and below */
+    align-items: flex-start;       /* Align columns to top */
+}
+
+.column-left {
+    flex: 1;                       /* Take equal space (50%) */
+    min-width: 0;                  /* Allow shrinking */
+}
+
+.column-right {
+    flex: 1;                       /* Take equal space (50%) */
+    min-width: 0;                  /* Allow shrinking */
+}
+
+/* Card styling for columns */
+.column-container .card {
+    margin-bottom: 20px;           /* Space between cards */
+    background-color: #ffffff;     /* White background */
+    border: 1px solid #e0e0e0;     /* Light gray border */
+    border-radius: 8px;            /* Rounded corners */
+    padding: 20px;                 /* Internal padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animations */
+}
+
+.column-container .card:hover {
+    transform: translateY(-2px);   /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.column-container .card h2 {
+    color: #2471a3;               /* Blue headings */
+    margin-top: 0;                /* Remove top margin */
+    margin-bottom: 15px;          /* Space below heading */
+    border-bottom: 2px solid #2471a3; /* Blue underline */
+    padding-bottom: 5px;          /* Space above underline */
+}
+
+.column-container .card img {
+    display: block;               /* Block display */
+    margin: 15px auto;            /* Center the image */
+    border-radius: 5px;           /* Rounded corners */
+    border: 2px solid #e0e0e0;    /* Light border around image */
+}
+
+.column-container .card ul {
+    margin: 15px 0;               /* Margin around lists */
+    padding-left: 20px;           /* Indent list items */
+}
+
+.column-container .card ul li {
+    margin-bottom: 8px;           /* Space between list items */
+    line-height: 1.5;             /* Better line spacing */
+}
+
+.column-container .card ul li a {
+    color: #2471a3;               /* Blue links */
+    text-decoration: none;        /* No underline initially */
+    font-weight: 500;             /* Medium font weight */
+    transition: all 0.2s ease;    /* Smooth link transitions */
+}
+
+.column-container .card ul li a:hover {
+    text-decoration: underline;   /* Underline on hover */
+    color: #1a5a8a;              /* Darker blue on hover */
+}
+
+/* Responsive design - Mobile */
+@media (max-width: 768px) {
+    .column-container {
+        flex-direction: column;    /* Stack columns vertically */
+        gap: 20px;                /* Reduce gap on mobile */
+    }
+    
+    .column-left,
+    .column-right {
+        flex: none;               /* Reset flex properties */
+        width: 100%;              /* Full width on mobile */
+    }
 }
 
 
