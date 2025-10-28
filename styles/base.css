@@ -74,74 +74,74 @@ nav a:hover{
 }
 
 .column-right {
-    flex: 1;                       /* Take equal space (50%) */
-    min-width: 0;                  /* Allow shrinking */
+    flex: 1;                       
+    min-width: 0;                  
 }
 
-/* Card styling for columns */
+
 .column-container .card {
-    margin-bottom: 20px;           /* Space between cards */
-    background-color: #ffffff;     /* White background */
-    border: 1px solid #e0e0e0;     /* Light gray border */
-    border-radius: 8px;            /* Rounded corners */
-    padding: 20px;                 /* Internal padding */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animations */
+    margin-bottom: 20px;           
+    background-color: #ffffff;    
+    border: 1px solid #e0e0e0;     
+    border-radius: 8px;            
+    padding: 20px;                 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
 }
 
 .column-container .card:hover {
-    transform: translateY(-2px);   /* Lift effect on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+    transform: translateY(-105px);   
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
 }
 
 .column-container .card h2 {
-    color: #2471a3;               /* Blue headings */
-    margin-top: 0;                /* Remove top margin */
-    margin-bottom: 15px;          /* Space below heading */
-    border-bottom: 2px solid #2471a3; /* Blue underline */
-    padding-bottom: 5px;          /* Space above underline */
+    color: #2471a3;               
+    margin-top: 0;                
+    margin-bottom: 15px;          
+    border-bottom: 2px solid #2471a3; 
+    padding-bottom: 5px;          
 }
 
 .column-container .card img {
-    display: block;               /* Block display */
-    margin: 15px auto;            /* Center the image */
-    border-radius: 5px;           /* Rounded corners */
-    border: 2px solid #e0e0e0;    /* Light border around image */
+    display: block;               
+    margin: 15px auto;            
+    border-radius: 5px;           
+    border: 2px solid #e0e0e0;    
 }
 
 .column-container .card ul {
-    margin: 15px 0;               /* Margin around lists */
-    padding-left: 20px;           /* Indent list items */
+    margin: 15px 0;               
+    padding-left: 20px;           
 }
 
 .column-container .card ul li {
-    margin-bottom: 8px;           /* Space between list items */
-    line-height: 1.5;             /* Better line spacing */
+    margin-bottom: 8px;           
+    line-height: 1.5;             
 }
 
 .column-container .card ul li a {
-    color: #2471a3;               /* Blue links */
-    text-decoration: none;        /* No underline initially */
-    font-weight: 500;             /* Medium font weight */
-    transition: all 0.2s ease;    /* Smooth link transitions */
+    color: #2471a3;               
+    text-decoration: none;        
+    font-weight: 500;             
+    transition: all 0.2s ease;    
 }
 
 .column-container .card ul li a:hover {
-    text-decoration: underline;   /* Underline on hover */
-    color: #1a5a8a;              /* Darker blue on hover */
+    text-decoration: underline;   
+    color: #1a5a8a;              
 }
 
-/* Responsive design - Mobile */
+
 @media (max-width: 768px) {
     .column-container {
-        flex-direction: column;    /* Stack columns vertically */
-        gap: 20px;                /* Reduce gap on mobile */
+        flex-direction: column;    
+        gap: 20px;                
     }
     
     .column-left,
     .column-right {
-        flex: none;               /* Reset flex properties */
-        width: 100%;              /* Full width on mobile */
+        flex: none;               
+        width: 100%;              
     }
 }
 
