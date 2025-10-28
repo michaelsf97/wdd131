@@ -1,5 +1,8 @@
-.placeholder-link {
-    color: #888;
-    font-style: italic;
-    cursor: not-allowed;
+main, footer {
+    background-color: #2471a3;
+    padding: 20px;
 }
+
+
+
+
