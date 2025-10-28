@@ -157,6 +157,24 @@ nav a:hover{
 }
 
 
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    align-items: start;
+}
+
+.card-grid img {
+    grid-column: 1;
+    width: 100%;
+    height: auto;
+}
+
+.card-grid .content {
+    grid-column: 2;
+}
+
 @media (max-width: 768px) {
     .column-container {
         flex-direction: column;    
@@ -167,6 +185,16 @@ nav a:hover{
     .column-right {
         flex: none;               
         width: 100%;              
+    }
+    
+    .card-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+    
+    .card-grid img,
+    .card-grid .content {
+        grid-column: 1;
     }
 }
 
