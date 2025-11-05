@@ -37,10 +37,23 @@
     </main>
     <footer>
         <p> &copy; 2025 - 2027 Temple Album. All Rights Reserved. &reg;</p>
-        <p id="lastModified"></p>
-        
-           
-        
+        <p>Current time: <span id="time"></span></p>
+        <script>
+            function updateTime() {
+                const now = new Date ();
+                const time = now.toLocaleTimeString();
+                document.getElementById("time").textContent = time;
+            }
+            updateTime(); // show now time immediately
+            setInterval (updateTime, 1000);  //update every second
+ 
+        </script>
+
+        </footer>
+
+       
+
+
 
     </footer>
     
