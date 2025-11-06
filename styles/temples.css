@@ -9,14 +9,14 @@ header {
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    background-color: purple;
+    background-color: #800080;
     padding: 10px 20px;
+    color: #ffffff;
 }
 
 header h1 {
     margin: 0;
-    color: white;
-
+    color: #ffffff;
 }
 
 /* Hamburger button - hidden by default on desktop */
@@ -24,7 +24,7 @@ header h1 {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
     padding: 0;
@@ -45,7 +45,7 @@ nav ul {
 }
 nav a {
     display: block; 
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 14px 20px;
     border-radius: 5px;
@@ -53,10 +53,10 @@ nav a {
     }
 
     nav a:hover {
-        background-color: blueviolet;
-        color: white;
+        background-color: #8a2be2;
+        color: #ffffff;
         text-decoration: underline;
-        box-shadow: inset 0 0 10px rgba(0 ,0 , 0 , 0.2);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
         transition: background-color 0.3s, color 0.3s;
     }
 
@@ -93,8 +93,8 @@ nav a {
     }
 
     footer {
-        background-color: purple;
-        color: white;
+        background-color: #800080;
+        color: #ffffff;
         text-align: center;
         padding: 20px;
         margin-top: 30px;
@@ -114,11 +114,11 @@ nav a {
         nav ul {
             display: none;
             flex-direction: column;
-            border: 1px solid #fff;
+            border: 1px solid #ffffff;
             position: absolute;
             top: 60px;
             right: 20px;
-            background-color: purple;
+            background-color: #800080;
             width: 200px;
             padding: 10px;
             border-radius: 5px;

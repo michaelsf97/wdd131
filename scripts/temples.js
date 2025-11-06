@@ -1,10 +1,13 @@
 // temples.js - Temple album specific JavaScript functionality
 // Author: Michael Smith Saavedra Forero
 
-// Example: Display a custom message in the console
+// Set current year in footer
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 
+// Set last modified date in footer
+document.getElementById("lastModified").textContent = document.lastModified;
 
+// Hamburger menu functionality
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
