@@ -20,18 +20,15 @@ header h1 {
 
 }
 
+/* Hamburger button - hidden by default on desktop */
 #hamburger {
+    display: none;
+    background: none;
+    border: none;
     color: white;
     font-size: 2rem;
     cursor: pointer;
-}
-
-
-#hamburger {
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    
+    padding: 0;
 }
 
 nav {
@@ -96,12 +93,27 @@ nav a {
         font-weight: bold;
     }
 
-    @media (max-width: 600px) {
+    footer {
+        background-color: purple;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+    }
 
+    footer p {
+        margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+        /* Show hamburger button in mobile view */
         #hamburger {
             display: block;
         }
+
+        /* Hide navigation by default on mobile */
         nav ul {
+            display: none;
             flex-direction: column;
             border: 1px solid #fff;
             position: absolute;
@@ -112,7 +124,19 @@ nav a {
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
 
+        /* Show navigation when active class is added */
+        nav.active ul {
+            display: flex;
+        }
+
+        nav ul li {
+            width: 100%;
+        }
+
+        nav a {
+            width: 100%;
         }
 
         .mosaic-gallery {
